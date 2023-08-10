@@ -88,15 +88,16 @@ struct Student
 {
 	int Number;
 	int Score;
-	std::string mName;
+	std::string Name;
 };
 
 std::ostream& operator << (std::ostream& os, const std::vector<Student>& students)
 {
 	for (const auto& e : students)
 	{
-		std::cout << e.Score << " : " << e.Name << ", " << e.Score << std::endl;
+		std::cout << e.Number << " : " << e.Name << ", " << e.Score << std::endl;
 	}
+	return os;
 }
 
 int main()
@@ -104,7 +105,14 @@ int main()
 	std::vector<Student> student{ {1, 100, "Doggy"}, {2, 50, "Kitty"},
 		{3, 90, "Piggy"}, {4, 20, "Bunny"} };
 
+	std::cout << "-----------오름차순 정렬------------" << std::endl;
 	std::sort(student.begin(), student.end(), [](Student& x, Student& y)->bool
 		{ return x.Score > y.Score; });
+	std::cout << student;
 
+	std::cout << "-----------내림차순 정렬------------" << std::endl;
+
+	std::sort(student.begin(), student.end(), [](Student& x, Student& y)->bool
+		{ return x.Score < y.Score; });
+	std::cout << student;
 }
