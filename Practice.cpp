@@ -84,6 +84,7 @@ int main()
 
 */
 
+/*
 struct Student
 {
 	int Number;
@@ -115,4 +116,22 @@ int main()
 	std::sort(student.begin(), student.end(), [](Student& x, Student& y)->bool
 		{ return x.Score < y.Score; });
 	std::cout << student;
+}
+*/
+
+int main()
+{
+	std::vector<int> numbers{ 5,2,3,1,4 };
+
+	// 이터레이터
+	for (std::vector<int>::iterator it = numbers.begin(); it != numbers.end(); it++)
+	{
+		std::cout << *it << std::endl;
+	}
+
+	//for_each
+	std::for_each(numbers.begin(), numbers.end(), [](const int& val) {std::cout << val << std::endl;});
+
+	// range-base
+	for (const auto& e : numbers) { std::cout << e << std::endl; }
 }

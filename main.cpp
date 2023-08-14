@@ -2,6 +2,7 @@
 #include <string>
 #include <sstream> // string stream
 #include <vector>
+#include "Ex3.h"
 
 /*
 int main()
@@ -28,6 +29,7 @@ int main()
 }
 */
 
+/*
 int main()
 {
 	std::vector<int> v1{ 1,2,3,4,5,6 };
@@ -37,4 +39,11 @@ int main()
 	v5.push_back(3);
 
 	return 0;
+}
+
+*/
+
+int main()
+{
+	Ex3();
 }
