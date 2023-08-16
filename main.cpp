@@ -3,6 +3,7 @@
 #include <sstream> // string stream
 #include <vector>
 #include "Ex3.h"
+#include "map.h"
 
 /*
 int main()
@@ -45,5 +46,5 @@ int main()
 
 int main()
 {
-	Ex3();
+	Ex4();
 }

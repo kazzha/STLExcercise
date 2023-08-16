@@ -147,15 +147,34 @@ void SetEx()
 
 void MapEx()
 {
-	std::map<std::string, std::string> operators;
+	std::map<std::string, std::string> myMap;
 
-	operators.insert({ "+","더하기 연산자이면서 이항연산자입니다" });
-	operators.insert({ ">>","비트 시프트 연산자입니다." });
-	operators.insert({ "new","동적 메모리 할당 연산자입니다. delete 주의하세요" });
+	myMap.insert({ "+","더하기 연산자이면서 이항연산자입니다" });
+	myMap.insert({ ">>","비트 시프트 연산자입니다." });
+	myMap.insert({ "new","동적 메모리 할당 연산자입니다. delete 주의하세요" });
 
-	std::cout << operators["+"] << std::endl;
+	std::cout << myMap["+"] << std::endl;
+
+	myMap["-"] = "빼기 연산자입니다.";
+
+	for (auto e : myMap)
+	{
+
+	}
 }
 void Ex3()
 {
 	StackAndQueue();
+	std::pair<int, int> pt1;
+
+	std::tuple<int, int, std::string> st1;
+
+	st1 = { 1,100,"Kitty" };
+	st1 = std::make_tuple<int, int, std::string>(2, 50, "Doggy"); // make_pair도 가능
+
+	for (int i = 0; i < std::tuple_size<decltype(st1)>::value; i++)
+	{
+		//std::get<0>(st1);
+	}
+	std::cout << std::get<0>(st1) << std::endl;
 }
