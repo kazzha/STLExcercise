@@ -29,5 +29,8 @@
     <ClInclude Include="map.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
+    <ClInclude Include="Ex5.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

@@ -4,6 +4,7 @@
 #include <vector>
 #include "Ex3.h"
 #include "map.h"
+#include "Ex5.h"
 
 /*
 int main()
@@ -46,5 +47,14 @@ int main()
 
 int main()
 {
-	Ex4();
+	/*
+	PrintVector2D();
+	std::string s = "acdfc1";
+	std::string t = "dca1cf";
+	
+	std::cout << std::boolalpha << IsSameImage(s, t) << std::endl; // boolalpah = 참거짓을 알파벳으로 쓴다
+	*/
+
+	std::cout << MaxLetter("hhhe");
+	return 0;
 }
